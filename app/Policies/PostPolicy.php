@@ -65,10 +65,10 @@ class PostPolicy
         //
     }
 
-//    public function tekser(): bool
-//    {
-//        return true;
-//    }
+    public function tekser(): bool
+    {
+        return true;
+    }
 
 
 

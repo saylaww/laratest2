@@ -10,6 +10,7 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use function Ramsey\Collection\add;
 
 class Controller extends BaseController
 {
@@ -20,6 +21,21 @@ class Controller extends BaseController
     public function __construct(UserRepositoryInterface $repository)
     {
         $this->repository = $repository;
+//        $this->middleware('')
+    }
+
+    public function set()
+    {
+        $cinema = Cinema::find(1);
+//        $cinema->movies()->detach(3);
+        $t = [];
+        $index = 0;
+        foreach ($cinema->movies as $cin){
+            $t[$index] = ($cin->name);
+            $index++;
+        }
+//        dd($cinema->movies);
+        return $t;
     }
 
     public function test()

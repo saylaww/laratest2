@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('cinema', [Controller::class,'set']);
+
 Route::get('person',[Controller::class,'all'])->middleware('auth:sanctum');
-Route::get('post',[PostController::class,'index'])->middleware('auth:sanctum');
+Route::get('post',[PostController::class,'show'])->middleware('auth:sanctum');
 Route::get('music',[MusicController::class,'index']);
 
 Route::get('/mono/test', [PostController::class,'test2'])->middleware('auth:sanctum');

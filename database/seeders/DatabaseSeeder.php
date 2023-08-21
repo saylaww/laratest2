@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             PostSeeder::class,
             MusicSeeder::class,
+            CinemaSeeder::class,
+            MovieSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();

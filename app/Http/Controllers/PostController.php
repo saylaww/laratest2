@@ -42,10 +42,11 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-//        Gate::authorize('test2');
+//        Gate::authorize('test3');
+        Gate::authorize('tekser');
 //        $this->authorize('');
         $test = Post::find(2);
-        $this->authorize('view');
+//        $this->authorize('view');
         return $test;
     }
 
